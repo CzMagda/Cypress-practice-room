@@ -1,0 +1,260 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-18T14:09:21.381Z",
+    "end": "2023-06-18T14:09:46.730Z",
+    "duration": 25349,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "54d4626d-2432-4f14-b751-5e365b4ecce0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Exercises\\Tests on Wikipedia website.cy.js",
+      "file": "cypress\\e2e\\Exercises\\Tests on Wikipedia website.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Go to site Wikipedia",
+          "fullTitle": "Go to site Wikipedia",
+          "timedOut": null,
+          "duration": 7443,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "google.getAcceptCookieSelector().click().should(\"not.be.visible\");\ngoogle.getSearchInput().clear().type(\"Wikipedia\");\ncy.get(\".aajZCb > .lJ9FBc > center > .gNO89b\").click();\ncy.url().should(\"contain\", \"?q=Wikipedia\");\ncy.get('[href=\"https://www.wikipedia.org/\"] > .LC20lb').click().wait(1000);\ncy.origin(\"https://www.wikipedia.org\", () => {\n  cy.url().should(\"contain\", \"wikipedia\");\n});",
+          "err": {},
+          "uuid": "b2f0bc74-f3a7-410d-bf18-c525b93598ec",
+          "parentUUID": "54d4626d-2432-4f14-b751-5e365b4ecce0",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [
+        {
+          "uuid": "d86e2c5d-59de-43b8-9824-7bfa1bf8fa5d",
+          "title": "Tests of cookie pop-up on google",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Accept Cookies",
+              "fullTitle": "Tests of cookie pop-up on google Accept Cookies",
+              "timedOut": null,
+              "duration": 717,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "google.getAcceptCookieSelector().should(\"be.visible\");\ngoogle.getAcceptCookieSelector().click();\ngoogle.getAcceptCookieSelector().should(\"not.be.visible\");",
+              "err": {},
+              "uuid": "e1b9a6e3-308a-458c-93fb-141472b60885",
+              "parentUUID": "d86e2c5d-59de-43b8-9824-7bfa1bf8fa5d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Reject Cookies",
+              "fullTitle": "Tests of cookie pop-up on google Reject Cookies",
+              "timedOut": null,
+              "duration": 591,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "google.getRejectCookieSelector().should(\"be.visible\");\ngoogle.getRejectCookieSelector().click();\ngoogle.getRejectCookieSelector().should(\"not.be.visible\");",
+              "err": {},
+              "uuid": "36802ad8-2527-44bd-b8db-a0be9541eef6",
+              "parentUUID": "d86e2c5d-59de-43b8-9824-7bfa1bf8fa5d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Customise Cookie",
+              "fullTitle": "Tests of cookie pop-up on google Customise Cookie",
+              "timedOut": null,
+              "duration": 1139,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "google.getCustomiseCookieSelector().should(\"be.visible\");\ngoogle.getCustomiseCookieSelector().click();\ncy.url().should(\"contain\", \"consent\");",
+              "err": {},
+              "uuid": "8e7af898-1e2d-416b-92bd-6e16a900191c",
+              "parentUUID": "d86e2c5d-59de-43b8-9824-7bfa1bf8fa5d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e1b9a6e3-308a-458c-93fb-141472b60885",
+            "36802ad8-2527-44bd-b8db-a0be9541eef6",
+            "8e7af898-1e2d-416b-92bd-6e16a900191c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2447,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "521d452c-170d-4c72-905a-4689f2adea1e",
+          "title": "Tests of search on google",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search Wikipedia with enter",
+              "fullTitle": "Tests of search on google Search Wikipedia with enter",
+              "timedOut": null,
+              "duration": 3604,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "google.getAcceptCookieSelector().click().should(\"not.be.visible\");\ngoogle.getSearchInput().clear().type(\"Wikipedia\").type(\"{enter}\");\ncy.url().should(\"contain\", \"?q=Wikipedia\");",
+              "err": {},
+              "uuid": "51b864a7-f865-4532-acfa-5ffe940ccbcc",
+              "parentUUID": "521d452c-170d-4c72-905a-4689f2adea1e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search Wikipedia with click on icon",
+              "fullTitle": "Tests of search on google Search Wikipedia with click on icon",
+              "timedOut": null,
+              "duration": 3622,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "google.getAcceptCookieSelector().click().should(\"not.be.visible\");\ngoogle.getSearchInput().clear().type(\"Wikipedia\");\ncy.get(\".aajZCb > .lJ9FBc > center > .gNO89b\").click();\ncy.url().should(\"contain\", \"?q=Wikipedia\");",
+              "err": {},
+              "uuid": "ff4ce0b8-782c-4853-9d82-72cd0a13976a",
+              "parentUUID": "521d452c-170d-4c72-905a-4689f2adea1e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search Wikipedia with click on element from list functions",
+              "fullTitle": "Tests of search on google Search Wikipedia with click on element from list functions",
+              "timedOut": null,
+              "duration": 3601,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "google.getAcceptCookieSelector().click().should(\"not.be.visible\");\ngoogle.getSearchInput().clear().type(\"Wikipedia\");\ncy.get(\"#jZ2SBf > .wM6W7d > span\").click();\ncy.url().should(\"contain\", \"?q=wikipedia\");",
+              "err": {},
+              "uuid": "dc9ccdc8-ed5d-4937-b248-272f93d02e73",
+              "parentUUID": "521d452c-170d-4c72-905a-4689f2adea1e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search Wikipedia with click on element from list functions - 2",
+              "fullTitle": "Tests of search on google Search Wikipedia with click on element from list functions - 2",
+              "timedOut": null,
+              "duration": 4303,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "google.getAcceptCookieSelector().click().should(\"not.be.visible\");\ngoogle.getSearchInput().clear().type(\"Wikipedia\").wait(1000);\n// cy.get(\".wM6W7d\").first();\n// cy.get(\".wM6W7d\").eq(-3);\n// cy.get(\".G43f7e\").children();\ncy.get(\".erkvQe\").children().children().children().eq(0).click();\ncy.url().should(\"contain\", \"?q=wikipedia\");",
+              "err": {},
+              "uuid": "b3222a39-13e3-4abd-90c3-baad59a629c3",
+              "parentUUID": "521d452c-170d-4c72-905a-4689f2adea1e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "51b864a7-f865-4532-acfa-5ffe940ccbcc",
+            "ff4ce0b8-782c-4853-9d82-72cd0a13976a",
+            "dc9ccdc8-ed5d-4937-b248-272f93d02e73",
+            "b3222a39-13e3-4abd-90c3-baad59a629c3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15130,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [
+        "b2f0bc74-f3a7-410d-bf18-c525b93598ec"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 7443,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "[name]-report",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
